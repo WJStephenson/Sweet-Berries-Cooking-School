@@ -1,0 +1,282 @@
+:root {
+    --color-yellow: #FEBD2F;
+    --color-text: #646464;
+    --color-outline: #DCDCDC;
+    --gap: 8rem;
+    --vw-width: 90vw;
+}
+
+body, html {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F5F3EF;
+    margin: auto;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto Serif', serif;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1.125rem;
+}
+
+.p1 {
+    font-size: 1.5rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--gap);
+}
+
+button {
+    width: 130px;
+    height: 48px;
+    border-radius: 24px;
+    background-color: black;
+    color: white;
+    border: 1px solid var(--color-outline);
+    font-size: 1.125rem;
+    font-weight: 500;
+    cursor: pointer;
+
+    transition: scale 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+
+button:hover {
+    scale: 1.05;
+}
+
+header {
+    width: var(--vw-width);
+    
+    max-width: 1440px;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+.desktop-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mobile-header {
+    display: none;
+    margin-left: auto;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hamburger-menu {
+    position: absolute;
+    right: 0;
+
+    transition: transform 0.2s ease;
+}
+
+.hamburger-menu:hover {
+    transform: rotate(90deg);
+}
+
+.courses-aboutUs {
+    display: flex;
+    gap: 2rem;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    margin: auto;
+    width: var(--vw-width);
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    justify-content: center;
+    align-items: center;
+}
+
+banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap);
+}
+
+.banner-image img{
+    width: 600px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5rem 2.5rem;
+}
+
+.card {
+    max-width: 400px;
+    aspect-ratio: 1.23 / 1;
+    border-radius: 2rem;
+    display: flex;
+    padding: 2.5rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.card-1 {
+    background-color: var(--color-yellow);
+}
+
+.card-button {
+    background-color: white;
+    color: black;
+}
+
+.card-icon {
+    position: absolute;
+    right: 50px;
+    top: 0;
+    transform: translateY(-50%);
+}
+
+footer {
+    background-color: var(--color-yellow);
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1360px) {
+
+    :root {
+        --gap: 6rem;
+        --vw-width: 95vw;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .p1 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem 1.5rem;
+    }
+
+    banner {
+        flex-direction: column;
+    }
+
+    .banner-image img{
+        width: 688px;
+        max-height: 400px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .banner-text {
+        width: 80vw;
+        text-align: center;
+    }
+
+    .card {
+        padding: 2rem;
+        max-width: 322px;
+        max-height: 271px;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .cards-container {
+        grid-template-columns: 1fr;
+    }    
+
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .banner-image img {
+        max-width: var(--vw-width);
+        max-height: auto;
+    }
+
+    .card-1 {
+        max-height: 132px;
+        aspect-ratio: 342 / 132;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .mobile-header {
+        display: flex;
+    }
+
+    .desktop-header {
+        display: none;
+    }
+
+    .card-icon {
+        right: 20px;
+        top: -8px;
+        scale: 0.8;
+    }
+}
