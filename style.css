@@ -118,7 +118,7 @@ main {
     align-items: center;
 }
 
-banner {
+.banner {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -186,7 +186,7 @@ footer {
 
     :root {
         --gap: 6rem;
-        --vw-width: 95vw;
+        --vw-width: 90vw;
     }
 
     h1 {
@@ -214,7 +214,7 @@ footer {
         gap: 4rem 1.5rem;
     }
 
-    banner {
+    .banner {
         flex-direction: column;
     }
 
@@ -254,7 +254,6 @@ footer {
 
     .banner-image img {
         max-width: var(--vw-width);
-        max-height: auto;
     }
 
     .card-1 {
