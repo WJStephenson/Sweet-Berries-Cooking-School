@@ -85,14 +85,61 @@ header {
 
 .hamburger-menu {
     position: absolute;
-    right: 0;
+    right: 0px;
+    cursor: pointer;
 
     transition: transform 0.2s ease;
 }
 
-.hamburger-menu:hover {
-    transform: rotate(90deg);
+.hamburger-menu {
+    cursor: pointer;
 }
+
+.hamburger-menu:hover {
+    transform: rotateZ(90deg);
+}
+
+#hamburger-checkbox:checked ~ .hamburger-menu {
+    transform: rotateZ(90deg);
+}
+
+#hamburger-checkbox:checked ~ .mobile-menu {
+    transform: translateX(-300px);
+}
+
+#hamburger-checkbox {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: -300px;
+    background-color: #e9e6e1;
+    width: 150px;
+    height: 300px;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.05);
+    gap: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.mobile-menu a {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: var(--color-yellow);
+}
+
 
 .courses-aboutUs {
     display: flex;
@@ -266,6 +313,10 @@ footer {
     }
 
     .mobile-header {
+        display: flex;
+    }
+
+    .mobile-menu {
         display: flex;
     }
 
